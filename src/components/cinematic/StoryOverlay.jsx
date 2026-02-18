@@ -23,10 +23,10 @@ const StoryOverlay = ({ scrollProgress }) => {
 
     // VISIBILITY FIX CONFIRMED:
     // Starts fading in at 0.68 (minimal 3% buffer from impactBeat end)
-    // FADES OUT by 0.98 so it "comes and goes" before the section unpins
+    // FADES OUT by 0.88 so it "comes and goes" distinctly before the next section
     const ctaBeat = {
-        opacity: useTransform(scrollProgress, [0, 0.68, 0.78, 0.90, 0.98], [0, 0, 1, 1, 0]),
-        y: useTransform(scrollProgress, [0, 0.68, 0.78, 0.90, 0.98], [50, 50, 0, 0, -50])
+        opacity: useTransform(scrollProgress, [0, 0.68, 0.78, 0.82, 0.88], [0, 0, 1, 1, 0]),
+        y: useTransform(scrollProgress, [0, 0.68, 0.78, 0.82, 0.88], [50, 50, 0, 0, -100])
     };
 
     return (
